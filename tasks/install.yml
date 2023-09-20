@@ -13,3 +13,15 @@
 - name: Install Splunk Forwarder package for Debian
   shell:
     command: 'dpkg -i /opt/splunkforwarder/{{package_name_forwarder}}'
+
+- name: Change ownership of splunkforwarder directory
+  file:
+    state: 'directory'
+    recurse: true
+    path: '/opt/splunkforwarder'
+    owner: 'splunkfwd'
+    group: 'splunkfwd'
+
+- name: Start the splunkforwarder
+  shell:
+    command: '/opt/splunkforwarder/bin/splunk start'
