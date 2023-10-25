@@ -2,7 +2,7 @@
 - name: Setup Splunk user
   user:
     name: '{{user_splunk}}'
-    home: '/opt/splunkforwarder/'
+    home: '{{dir_home_splunk}}'
     
 - name: Download Splunk Forwarder package
   get_url:
@@ -12,16 +12,16 @@
 
 - name: Install Splunk Forwarder package for RHEL | CentOS | AlmaLinux
   shell:
-    command: 'yum install /opt/splunkforwarder/{{package_name_forwarder}}'
+    command: 'yum install '{{dir_home_splunk}}/{{package_name_forwarder}}'
 
 - name: Change ownership of splunkforwarder directory
   file:
     state: 'directory'
     recurse: true
-    path: '/opt/splunkforwarder'
-    owner: 'splunk'
-    group: 'splunk'
+    path: '{{dir_home_splunk}}'
+    owner: '{{user_splunk}}'
+    group: '{{user_splunk}}'
 
 - name: Start the splunkforwarder
   shell:
-    command: '/opt/splunkforwarder/bin/splunk start'
+    command: ''{{dir_home_splunk}}'/bin/splunk start'
