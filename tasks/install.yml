@@ -1,7 +1,7 @@
 ---
 - name: Setup Splunk user
   user:
-    name: 'splunkfwd'
+    name: 'splunk'
     home: '/opt/splunkforwarder/'
     
 - name: Download Splunk Forwarder package
@@ -19,8 +19,8 @@
     state: 'directory'
     recurse: true
     path: '/opt/splunkforwarder'
-    owner: 'splunkfwd'
-    group: 'splunkfwd'
+    owner: 'splunk'
+    group: 'splunk'
 
 - name: Start the splunkforwarder
   shell:
