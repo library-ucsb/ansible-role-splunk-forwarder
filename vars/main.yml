@@ -1,2 +1,5 @@
 ---
-splunkforwarder_configure: false
+splunk forwarder_configure: false
+splunk_admin_user: admin
+splunk_admin_pass: splunk_secret
+...
