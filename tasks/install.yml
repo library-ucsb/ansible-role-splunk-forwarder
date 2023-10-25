@@ -14,7 +14,7 @@
   shell:
     command: 'yum install {{dir_home_splunk}}/{{package_name_forwarder}}'
 
-- name: Change ownership of splunkforwarder directory
+- name: Change ownership of Splunk Forwarder directory
   file:
     state: 'directory'
     recurse: true
@@ -22,7 +22,7 @@
     owner: '{{user_splunk}}'
     group: '{{user_splunk}}'
 
-- name: Start the splunkforwarder
+- name: Start the Splunk Forwarder
   shell:
     command: '{{dir_home_splunk}}/bin/splunk start'
 ...
