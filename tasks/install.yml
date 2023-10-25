@@ -1,7 +1,7 @@
 ---
 - name: Setup Splunk user
   user:
-    name: 'splunk'
+    name: '{{user_splunk}}'
     home: '/opt/splunkforwarder/'
     
 - name: Download Splunk Forwarder package
