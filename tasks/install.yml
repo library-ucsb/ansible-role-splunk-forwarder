@@ -12,7 +12,7 @@
 
 - name: Install Splunk Forwarder package for RHEL | CentOS | AlmaLinux
   shell:
-    command: 'yum install '{{dir_home_splunk}}/{{package_name_forwarder}}'
+    command: 'yum install {{dir_home_splunk}}/{{package_name_forwarder}}'
 
 - name: Change ownership of splunkforwarder directory
   file:
