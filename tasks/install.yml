@@ -24,4 +24,5 @@
 
 - name: Start the splunkforwarder
   shell:
-    command: ''{{dir_home_splunk}}'/bin/splunk start'
+    command: '{{dir_home_splunk}}/bin/splunk start'
+...
