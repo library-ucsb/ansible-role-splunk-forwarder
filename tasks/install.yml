@@ -10,9 +10,9 @@
     dest: '/opt/splunkforwarder/{{package_name_forwarder}}'
     mode: '0664'
 
-- name: Install Splunk Forwarder package for Debian
+- name: Install Splunk Forwarder package for RHEL | CentOS | AlmaLinux
   shell:
-    command: 'dpkg -i /opt/splunkforwarder/{{package_name_forwarder}}'
+    command: 'yum install /opt/splunkforwarder/{{package_name_forwarder}}'
 
 - name: Change ownership of splunkforwarder directory
   file:
