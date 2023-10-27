@@ -11,8 +11,7 @@
     mode: '0664'
 
 - name: Install Splunk Forwarder package for RHEL | CentOS | AlmaLinux
-  shell:
-    command: 'yum install {{dir_home_splunk}}/{{package_name_forwarder}}'
+  shell: 'yum install {{dir_home_splunk}}/{{package_name_forwarder}}'
 
 - name: Change ownership of Splunk Forwarder directory
   file:
@@ -33,6 +32,5 @@
   no_log: true
 
 - name: Enable the Splunk Forwarder at boot
-  shell:
-    command: '{{dir_home_splunk}}/bin/splunk enable boot-start -systemd-managed 0'
+  shell: '{{dir_home_splunk}}/bin/splunk enable boot-start -systemd-managed 0'
 ...
