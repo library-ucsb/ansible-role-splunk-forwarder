@@ -23,6 +23,16 @@
     group: '{{user_splunk}}'
 
 - name: Start the Splunk Forwarder
-  shell:
+  expect:
     command: '{{dir_home_splunk}}/bin/splunk start --accept-license'
+    responses:
+      (?i).*username.*: "{{splunk_admin_user}}"
+      (?i).*password.*:
+      - "{{splunk_admin_pass}}"
+      - "{{splunk_admin_pass}}"
+  no_log: true
+
+- name: Enable the Splunk Forwarder at boot
+  shell:
+    command: '{{dir_home_splunk}}/bin/splunk enable boot-start -systemd-managed 0'
 ...
