@@ -1,4 +1,4 @@
 ---
 - name: Configure splunk forwarder port
-  command: splunk enable listen <port> -auth <username>:<password>
+  command: '{{dir_home_splunk}}/bin/splunk start --accept-license'
 ...
