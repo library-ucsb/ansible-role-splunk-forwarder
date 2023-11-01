@@ -4,7 +4,9 @@
   
 - name: Install Splunk Forwarder
   include_tasks: install.yml
-    
+  when:
+  - "'splunkforwarder' not in ansible_facts.packages|lower"
+  
 - name: Configure Splunk Forwarder
   include_tasks: config.yml
   when: config_splunk_forwarder | bool
