@@ -15,5 +15,5 @@
   when: config_splunk_forwarder | bool
 
 - name: Restart Splunk Forwarder
-  command: '{{dir_home_splunk}}/bin/splunk restart
+  command: '{{dir_home_splunk}}/bin/splunk restart'
 ...
