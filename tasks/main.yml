@@ -1,6 +1,6 @@
 ---
-- name: Install Requirements
-  include_tasks: requirements.yml
+- name: Install Dependencies
+  include_tasks: dependencies.yml
   
 - name: Install Splunk Forwarder
   include_tasks: install.yml
