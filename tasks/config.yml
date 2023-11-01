@@ -1,11 +1,6 @@
 ---
 - name: Configure splunk deployment server port
-  expect: 
-    command: '{{dir_home_splunk}}/bin/splunk set deploy-poll {{splunk_deployment_server}}:{{splunk_server_port}}'
-    responses:
-      (?i).*username.*: "{{splunk_admin_user}}"
-      (?i).*password.*: "{{splunk_admin_pass}}"
-  no_log: false
+  command: '{{dir_home_splunk}}/bin/splunk set deploy-poll {{splunk_deployment_server}}:{{splunk_server_port}} -auth'
 
 - name: Configure splunk forwarder port
   command: '{{dir_home_splunk}}/bin/splunk add forward-server {{splunk_deployment_server}}:{{splunk_indexer_port}} -auth'
