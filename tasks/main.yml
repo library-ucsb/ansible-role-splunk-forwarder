@@ -1,11 +1,11 @@
 ---
-- name: Install Dependencies
+- name: Install dependencies
   include_tasks: dependencies.yml
   
 - name: Install Splunk Forwarder
   include_tasks: install.yml
     
-- name: Configure splunk forwarder
+- name: Configure Splunk Forwarder
   include_tasks: config.yml
   when: config_splunk_forwarder | bool
 ...
