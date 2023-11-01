@@ -1,1 +1,6 @@
-
+---
+- name: Install pexpect Python Module
+  pip:
+    name: pexpect
+    state: present
+...
