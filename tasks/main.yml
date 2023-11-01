@@ -1,7 +1,10 @@
 ---
 - name: Install dependencies
   include_tasks: dependencies.yml
-  
+
+- name: Gather package_facts
+  package_facts:
+
 - name: Install Splunk Forwarder
   include_tasks: install.yml
   when:
