@@ -5,8 +5,8 @@ Role is used to download the SplunkForwarder package for the RHEL/CentOS/AlmaLin
 
 | Name                                                  | Types/Values       | Description                                                                          |
 | ------------------------------------------------------| -------------------|------------------------------------------------------------------------------------- |
-| `splunk_admin_user:`                                  | String             | Username of splunk admin that communicates with the Splunk server                    |
-| `splunk_admin_pass:`                                  | String             | Password of splunk admin that communicates with the Splunk server                    |
+| `splunk_admin_user`                                  | String             | Username of splunk admin that communicates with the Splunk server                    |
+| `splunk_admin_pass`                                  | String             | Password of splunk admin that communicates with the Splunk server                    |
 | `splunk_deployment_server`                            | String             | Name of the Splunk server                                                            |
 | `splunk_forwarder_download_url`                       | String             | URL of the Splunkforwarder package download                                          |
 | `package_name_forwarder`                              | String             | Subdirectory location of the Splunkforwarder package in /opt/splunkforwarder         |
