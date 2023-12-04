@@ -1,5 +1,5 @@
 ---
-splunk_forwarder_configure: false
+config_splunk_forwarder: false
 splunk_admin_user: admin
 splunk_admin_pass: splunk_secret
 splunk_deployment_server: 'your_splunk_deployment_server'
