@@ -1,9 +1,6 @@
 # ansible-role-splunk-forwarder
 Role is used to download the SplunkForwarder package for the RHEL/CentOS/AlmaLinux distributions, install the package, and then configure the SplunkForwarder to communicate with the Library Splunk server.
 
-## Secrets
-
-
 ## Role Variables
 
 | Name                                                  | Types/Values       | Description                                                                          |
@@ -19,3 +16,6 @@ Role is used to download the SplunkForwarder package for the RHEL/CentOS/AlmaLin
 | `splunk_server_port`                                  | String             | Port for management traffic with the Splunk server                                   |
 | `splunk_indexer_port`                                 | String             | Port for server indexing and ingest with the Splunk server                           |
 
+## Additional
+
+Currently the https://github.com/library-ucsb/iac-vm-linux-config-management is broken, and so this role is not being used.  The IAC Ansible play will either need to be fixed or reverted back to a working version.
